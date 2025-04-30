@@ -38,4 +38,8 @@ public class PersonaController {
         return personaService.buscarxId(id);
     }
     
+    @GetMapping("/{rut}")
+    public Persona getPersonaRut(@PathVariable String rut) {
+        return personaService.buscarxRut(rut);
+    }
 }

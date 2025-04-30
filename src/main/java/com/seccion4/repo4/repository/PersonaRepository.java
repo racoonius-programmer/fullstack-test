@@ -37,4 +37,13 @@ public class PersonaRepository {
         }
         return null;
     }
+
+    public Persona readRut(String rut){
+        for (Persona persona : personas) {
+            if(persona.getRut()==rut){
+                return persona;
+            }
+        }
+        return null;
+    }
 }
