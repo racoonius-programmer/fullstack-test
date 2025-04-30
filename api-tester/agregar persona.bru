@@ -1,0 +1,21 @@
+meta {
+  name: agregar persona
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8080/api/personas
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "id": 1,
+    "rut": "12345678-9",
+    "nombre": "wac",
+    "apellido": "oldo",
+    "edad": 69
+  }
+}
