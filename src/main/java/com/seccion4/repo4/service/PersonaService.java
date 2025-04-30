@@ -21,4 +21,7 @@ public class PersonaService {
         return personaRepository.readAll();
     }
 
+    public Persona buscarxId(int id){
+        return personaRepository.read(id);
+    }
 }

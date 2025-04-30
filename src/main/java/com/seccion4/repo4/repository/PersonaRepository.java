@@ -29,4 +29,12 @@ public class PersonaRepository {
         return personas;
     }
 
+    public Persona read(int id){
+        for (Persona persona : personas) {
+            if(persona.getId()==id){
+                return persona;
+            }
+        }
+        return null;
+    }
 }
