@@ -22,10 +22,21 @@ public class PersonaService {
     }
 
     public Persona buscarxId(int id){
+        System.out.println("por id");
         return personaRepository.read(id);
     }
 
     public Persona buscarxRut(String rut){
-        return personaRepository.readRut(rut);
+        System.out.println("por rut");
+        return personaRepository.readxRut(rut);
+    }
+
+    public Persona modificar(int id, Persona persona)
+    {
+        return personaRepository.update(id, persona);
+    }
+
+    public String borrar(int id) {
+        return personaRepository.delete(id);
     }
 }

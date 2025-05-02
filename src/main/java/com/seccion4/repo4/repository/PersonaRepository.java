@@ -38,12 +38,35 @@ public class PersonaRepository {
         return null;
     }
 
-    public Persona readRut(String rut){
+
+    public Persona readxRut(String rut) {
         for (Persona persona : personas) {
-            if(persona.getRut()==rut){
+            if(persona.getRut().equals(rut)){
                 return persona;
             }
         }
         return null;
     }
+
+    public Persona update(int id, Persona persona){
+        Persona modi=this.read(id);
+        if (modi!=null) {
+            modi.setNombre(persona.getNombre());
+            modi.setApellido(persona.getApellido());
+            modi.setEdad(persona.getEdad());
+            return persona;
+        }
+        return null;
+    }
+
+    public String delete(int id) {
+        if(personas.removeIf(kill->kill.getId()==id))
+    {
+        return "Persona eliminada";
+    }
+    return null;
+    }
+
+    
+
 }
